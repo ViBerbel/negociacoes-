@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Negociacoes</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <h2 class="titulo">Negociacoes</h2>
+  <form action="" class="form" onsubmit="controller.adiciona(event)">
+    <section class="box">
+      <div class="form-group">
+        <label for="" class="form-label">Data:</label>
+        <input class="data-input" type="date" id="data" required autofocus/>
+      </div>
+      <div class="form-group">
+        <label for="" class="form-label">Quantidade:</label>
+        <input class="data-input" type="number" id="quantidade" value="1" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="" class="form-label">Valor:</label>
+        <input class="data-input" type="number" id="valor" min="1" step="0.1" value="2" required>
+      </div>
+    </section>
+    <input type="submit" class="botao" value="adicionar"/>
+  </form>
+  <div class=" btn-group">
+    <button class="btn botao__importar">Importar Negociações</button>
+    <button class="btn botao__apagar">Apagar</button>
+  </div> 
+  <script src="/js/app/models/Negociacao.js"></script>
+  <script src="/js/app/controller/NegociacaoControle.js"></script>
+  <script src="/js/app/helper/DateHelper.js"></script>
+  <script src="/js/app/models/ListaNegociacoes.js"></script>
+  <script>
+    let controller = new Controller() 
+  </script>
+  <script src="/js/app/view/negociacoesView.js"></script>
+</body>
+</html>
